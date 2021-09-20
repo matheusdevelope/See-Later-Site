@@ -1,0 +1,27 @@
+@font-face { font-family: Montserrat; src: url('../../Montserrat-ExtraBold.ttf'); }
+@font-face { font-family: MontserratRegular; src: url('../../Montserrat-Regular.ttf'); }
+.HeaderContainer{
+display: flex;
+width: 100%;
+height: 50px;
+background-color: rgb(48, 103, 185);
+padding: 0 50px;
+position: absolute;
+justify-content: space-between;
+}
+
+.HeaderTitle{
+background-color: rgb(72, 148, 116);
+}
+
+ul{
+    display:inline-flex;
+    background-color: brown;
+}
+li{
+    list-style: none;
+    background-color: burlywood;
+    margin: 0 8px;
+    font-size: 22px;
+    font-family: 'MontserratRegular', sans-serif;
+}
