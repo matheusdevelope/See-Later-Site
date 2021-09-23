@@ -2,26 +2,29 @@
 @font-face { font-family: MontserratRegular; src: url('../../Montserrat-Regular.ttf'); }
 .HeaderContainer{
 display: flex;
-width: 100%;
+position: fixed;
+right: 0;
 height: 50px;
-background-color: rgb(48, 103, 185);
-padding: 0 50px;
-position: absolute;
-justify-content: space-between;
+width:100%;
+flex-direction: row-reverse;
 }
-
-.HeaderTitle{
-background-color: rgb(72, 148, 116);
+.HeaderContainer ul{
+    display:flex;
+    width: 50%;
+    justify-content: space-between;
+    padding: 0;
+    margin: auto 0;
 }
-
-ul{
-    display:inline-flex;
-    background-color: brown;
-}
-li{
+.HeaderContainer li{
     list-style: none;
-    background-color: burlywood;
-    margin: 0 8px;
-    font-size: 22px;
+    font-size: 20px;
     font-family: 'MontserratRegular', sans-serif;
+    font-weight: bold;
+    padding: 0 32PX;
+    cursor: pointer;
 }
+@media only screen and (max-width: 1000px) {
+    .HeaderContainer li{
+        font-size: 16px;
+    }
+ }

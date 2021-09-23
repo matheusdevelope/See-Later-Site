@@ -1,0 +1,20 @@
+@font-face { font-family: Montserrat; src: url('../../Montserrat-ExtraBold.ttf'); }
+@font-face { font-family: MontserratRegular; src: url('../../Montserrat-Regular.ttf'); }
+.FooterContainer{
+    display: flex;
+    height: 50px;
+    justify-content: flex-start;
+    padding-left: 8%;
+    margin-bottom: 3%;
+    }
+    .FooterContainer ul{
+        display:inline-flex;
+        justify-content: space-between;
+        padding: 0;
+    }
+    .FooterContainer li{
+        list-style: none;
+        padding: 0 16px;
+        cursor: pointer;
+    }
+    
