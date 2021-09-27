@@ -1,5 +1,6 @@
 @font-face { font-family: Montserrat; src: url('../../Montserrat-ExtraBold.ttf'); }
 @font-face { font-family: MontserratRegular; src: url('../../Montserrat-Regular.ttf'); }
+
 .HeaderContainer{
 display: flex;
 position: fixed;
@@ -7,22 +8,93 @@ right: 0;
 height: 50px;
 width:100%;
 flex-direction: row-reverse;
+background-color: #131D47;
 }
 .HeaderContainer ul{
     display:flex;
     width: 50%;
+    height: 50px;
     justify-content: space-between;
     padding: 0;
-    margin: auto 0;
+    margin: auto 0; 
+    align-items: center;   
+    background-color: #5DDADB;
 }
 .HeaderContainer li{
     list-style: none;
     font-size: 20px;
     font-family: 'MontserratRegular', sans-serif;
     font-weight: bold;
-    padding: 0 32PX;
+    padding: 0 16PX;
     cursor: pointer;
 }
+#Logo {
+    left:0;
+    top:3px;
+    position: absolute;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+}
+.LogoHide{
+    display: none;
+}
+.LogoShow {
+    cursor: pointer;
+    -webkit-animation: slide-in 0.5s forwards;
+    animation: slide-in 0.5s forwards;
+ }
+.LogoHidden{
+    animation: slide-out 1s forwards;
+    -webkit-animation: slide-out 1s forwards;
+}
+@keyframes slide-in {
+    100% { transform: translateX(0%); }
+}
+@-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateX(0%); }
+}
+@keyframes slide-out {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+@-webkit-keyframes slide-out {
+    0% { -webkit-transform: translateX(0%); }
+    100% { -webkit-transform: translateX(-100%); }
+}
+ 
+ .ContactShow {
+    animation: slide-inc 1s forwards;
+    -webkit-animation: slide-inc 1s forwards;
+ }
+
+#Contact {
+    font-size: 16px;
+    font-family: 'MontserratRegular', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+.ContactHidden {
+    padding: 0;
+    animation: slide-outc 1s forwards;
+    -webkit-animation: slide-outc 1s forwards;
+}
+@keyframes slide-outc {
+    0% { width: 110px; }
+    100% { width: 0; }
+}
+@-webkit-keyframes slide-outc {
+    0% { width: 110px; }
+    100% { width: 0; }
+}
+@keyframes slide-inc {
+    0% { width: 0; }
+    100% { width: 100px; }
+}
+@-webkit-keyframes slide-inc {
+    0% { width: 0; }
+    100% { width: 110px; }
+}
+
 @media only screen and (max-width: 1000px) {
     .HeaderContainer li{
         font-size: 16px;

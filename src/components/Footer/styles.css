@@ -18,3 +18,33 @@
         cursor: pointer;
     }
     
+
+    .FooterContainerShow {
+        animation: slide-inc 2s forwards;
+        -webkit-animation: slide-inc 2s forwards;
+     }
+    
+    #FooterContainerUl {
+        
+    }
+    .FooterContainerHidden {
+        padding: 0;
+        animation: slide-outc 2s forwards;
+        -webkit-animation: slide-outc 2s forwards;
+    }
+    @keyframes slide-outc {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+    @-webkit-keyframes slide-outc {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+    @keyframes slide-inc {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    @-webkit-keyframes slide-inc {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }

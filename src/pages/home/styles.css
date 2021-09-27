@@ -39,3 +39,28 @@ padding-bottom: 170px;
     margin: 0;
     font-size: 20px;
 }
+
+/* #Teste{
+    height: 200px;
+    width: 250px;
+    background-color: crimson;
+    transition: all 1s 0.2s ease;
+    padding: 16px;
+    margin-top: 20px;
+    
+    /* transition é um atalho para 
+    transition-property: all;  --all vai ser pra todas.    ou seleiconar "width"
+    transition-duration: 1s;
+    transition-delay: 0.2s;
+    transition-timing-function: ease;
+    
+    
+}
+#Teste:hover{
+    border-radius: 70px;
+    background-color: blue;
+    width: 100px;
+    padding: 0;
+    margin: 0;
+} */
+
