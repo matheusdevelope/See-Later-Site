@@ -1,0 +1,76 @@
+
+
+@font-face { font-family: MontserratRegular; src: url('../../Montserrat-Regular.ttf'); }
+
+
+.ContainerServices{
+    font-family: 'MontserratRegular', sans-serif;
+    padding: 50px 16px 0 16px;
+    align-items: flex-end;
+    width: 100%;
+    height: 100vh; 
+    background: linear-gradient(150deg, #131d47, #13214c, #122c58, #0c3c6a, #00517f, #006a95, #0084aa, #0f9ebb, #2fb6c9, #47c9d3, #57d5d9, #5ddadb);
+}
+.ColumnServices{
+    display: flex;
+    flex-direction: column;
+    max-width: 1300px;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    
+}
+.ServicesDescription{
+    color: #fff;
+    width: 50%;
+    font-size: 18px;
+    margin: 0 30px 0 0;
+}
+.BoxLineServices{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+.BoxLineServices img{
+    border-radius: 10px;
+}
+.BoxLineServices2{
+    display: none;
+    color: #fff;
+    font-size: 18px;
+}
+.FooterServices{
+    position:absolute;
+    bottom: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+    .BoxLineServices img{
+        width: 50%;
+        border-radius: 10px;
+    }
+ }
+ @media only screen and (max-width: 800px) {
+    .BoxLineServices img{
+        width: 50%;
+        border-radius: 10px;
+    }
+    .SubDescriptionServices{
+        display: none;
+    }
+    .BoxLineServices{
+        margin: 5% 0 0 0;
+    }
+    .BoxLineServices2{
+        display: block;
+    }
+    
+ }
+
+
+
+
+ 
+
+

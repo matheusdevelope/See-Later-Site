@@ -2,14 +2,14 @@
     display: flex;
     flex: 1;
     height: 100vh;
-}
-
+    }
+   
 .HomeBannerBox1{
     display: flex;
     flex: 1;
     align-items: center;
     justify-content: center;
-    background-color: #131D47;
+    background-color: #131D47; 
 }
 .HomeBannerBox2{
     display: flex;
@@ -30,7 +30,8 @@ max-width: 450px;
 padding-bottom: 170px;
 }
 .HomeBannerBox2SubFooter{
-    
+    display: flex;
+    align-items: center;
 }
 .HomeBannerBox2SubDescription h1{
     font-size: 35pt;
@@ -39,6 +40,43 @@ padding-bottom: 170px;
     margin: 0;
     font-size: 20px;
 }
+#ButtonFieldsContactHome{
+    color: #fff;
+    font-weight: bold;
+    background-color: #131d47;
+    border-radius: 5px;
+    font-size: 22px;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    overflow: hidden;
+    transition: all 1s ease;
+    padding: 8px;
+    height: 40px;
+    text-decoration: none;
+    margin: 0  12px 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* #Teste{
     height: 200px;
@@ -63,4 +101,13 @@ padding-bottom: 170px;
     padding: 0;
     margin: 0;
 } */
+#HomeLogo {
+    transition: all 1.5s ;
+}
+.HomeLogoShow {
+    opacity: 0;
+}
+.HomeLogoHidden {
+    opacity: 1;
+}
 

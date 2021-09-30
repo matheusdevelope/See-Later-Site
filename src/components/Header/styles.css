@@ -4,6 +4,7 @@
 .HeaderContainer{
 display: flex;
 position: fixed;
+z-index: 9;
 right: 0;
 height: 50px;
 width:100%;
@@ -21,12 +22,22 @@ background-color: #131D47;
     background-color: #5DDADB;
 }
 .HeaderContainer li{
+    display: flex;
     list-style: none;
     font-size: 20px;
     font-family: 'MontserratRegular', sans-serif;
     font-weight: bold;
-    padding: 0 16PX;
     cursor: pointer;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+}
+.HeaderContainer a{
+    text-decoration: none;
+    color: black;
+}
+.HeaderContainer a:hover{
+    font-size: 18px;
 }
 #Logo {
     left:0;
@@ -35,9 +46,7 @@ background-color: #131D47;
     transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
 }
-.LogoHide{
-    display: none;
-}
+
 .LogoShow {
     cursor: pointer;
     -webkit-animation: slide-in 0.5s forwards;
@@ -65,13 +74,14 @@ background-color: #131D47;
  .ContactShow {
     animation: slide-inc 1s forwards;
     -webkit-animation: slide-inc 1s forwards;
+    margin-right: 16px;
+    display: flex;
+    justify-content: center;
  }
 
-#Contact {
-    font-size: 16px;
-    font-family: 'MontserratRegular', sans-serif;
-    font-weight: bold;
-    cursor: pointer;
+#ContactHeader {
+    overflow: hidden;
+    width: 0;
 }
 .ContactHidden {
     padding: 0;
@@ -100,3 +110,5 @@ background-color: #131D47;
         font-size: 16px;
     }
  }
+
+

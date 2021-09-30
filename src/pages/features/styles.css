@@ -1,0 +1,131 @@
+
+
+@font-face { font-family: MontserratRegular; src: url('../../Montserrat-Regular.ttf'); }
+
+
+.ContainerFeatures{
+    font-family: 'MontserratRegular', sans-serif;
+    padding: 50px 16px 0 16px;
+    align-items: flex-end;
+    width: 100%;
+    flex: 1;
+    height: 100vh;
+    background: linear-gradient(150deg, #131d47, #13214c, #122c58, #0c3c6a, #00517f, #006a95, #0084aa, #0f9ebb, #2fb6c9, #47c9d3, #57d5d9, #5ddadb);
+}
+.ColumnFeatures{
+    display: flex;
+    flex-direction: column;
+    max-width: 1300px;
+    height: 100%;
+    margin: auto;
+    position: relative;  
+}
+.FeaturesDescription{
+    color: #fff;
+    width: 40%;
+    font-size: 18px;
+    margin: 0 30px 0 0;
+}
+.BoxLineFeatures{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 5%;
+}
+.FooterFeatures{
+    position:absolute;
+    bottom: 0;
+}
+#EmailField {
+    height: 50px;
+    width: 60%;
+
+}
+#EmailField form{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.ColumnFeatures button {
+    color: #fff;
+    font-weight: bold;
+    background-color: #131d47;
+    border-radius: 10px;
+    width: 115px;
+    padding: 8px 0;
+    font-size: 22px;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+}
+#InputEmailFieldFeatures{
+    transition: all 1s ease;
+    color: #000;
+    font-weight: bold;
+    margin-right: 8px;
+    border-radius: 10px;
+    font-size: 22px;
+    border: 0;
+    outline: none;
+    width: 0;
+    
+}
+.InputEmailFieldFeaturesShow{
+    padding: 8px;
+    animation: ShowFieldEmailFeaturesOpen 1s forwards;
+    -webkit-animation: ShowFieldEmailFeaturesOpen 1s forwards;
+}
+.InputEmailFieldFeatures { 
+    padding: 0;
+    animation: ShowFieldEmailFeaturesClose 1s forwards;
+    -webkit-animation: ShowFieldEmailFeaturesClose 1s forwards;
+}
+@keyframes ShowFieldEmailFeaturesOpen {
+    0% { width: 0; }
+    100% { width: 70%; }
+}
+@-webkit-keyframes ShowFieldEmailFeaturesOpen {
+    0% { width: 0; }
+    100% { width: 70%; }
+}
+@keyframes ShowFieldEmailFeaturesClose {
+    0% { width: 70%; }
+    100% { width: 0; }
+}
+@-webkit-keyframes ShowFieldEmailFeaturesClose{
+    0% { width: 70%; }
+    100% { width: 0; }
+}
+ @media only screen and (max-width: 1000px) {
+   .BoxLineFeatures{
+    flex-direction: column;
+   } 
+   .FeaturesDescription{
+       width: 90%;
+   }
+ }
+ @media only screen and (max-width: 800px) {
+    #EmailField {
+        width: 80%;
+    }
+  }
+  @media only screen and (max-width: 650px) {
+    #EmailField {
+        width: 90%;
+        font-size: 18px;
+    }
+    #InputEmailFieldFeatures{
+        font-size: 18px;
+    }
+    .ColumnFeatures button{
+        font-size: 18px;
+    }
+  }
+ 
+
+
+
+ 
+
+

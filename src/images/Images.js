@@ -78,3 +78,15 @@ export function Email() {
 </svg>
     )
 }
+
+export function Gradient(){
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1920 1080L-2.563e-05 1080L-2.563e-05 1.2964e-06L1920 1.2964e-06L1920 1080Z" fill="url(#paint0_linear)"/>
+<defs>
+<linearGradient id="paint0_linear" x1="173.5" y1="190.5" x2="1733.5" y2="957" gradientUnits="userSpaceOnUse">
+<stop stop-color="#131D47"/>
+<stop offset="1" stop-color="#5DDADB"/>
+</linearGradient>
+</defs>
+</svg>
+}
