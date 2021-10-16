@@ -1,11 +1,12 @@
 import React from "react";
 import Img from '../../images/imag2.png'
 import './styles.css'
-export default function () {
+export default function Services() {
    
     return (
+        <div id='ServicesContainer' className='Services'>
         <div className='ContainerServices'>
-            <div className='ColumnServices'>
+            <div className='ColumnServices' data-anime="top">
                 <div className='BoxLineServices'>
                     <div className='ServicesDescription'>
                         <h1>
@@ -60,11 +61,11 @@ export default function () {
                             Deleta e bora para o próximo!
                         </p>
                 </div>
-            <h3 className='FooterServices'>
+            {/* <h3 className='FooterServices'>
                 V 1.0
-            </h3>
+            </h3> */}
             </div>
-
+            </div>
         </div>
     )
 }

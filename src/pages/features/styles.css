@@ -10,6 +10,7 @@
     width: 100%;
     flex: 1;
     height: 100vh;
+    min-height: 640px;
     background: linear-gradient(150deg, #131d47, #13214c, #122c58, #0c3c6a, #00517f, #006a95, #0084aa, #0f9ebb, #2fb6c9, #47c9d3, #57d5d9, #5ddadb);
 }
 .ColumnFeatures{
@@ -41,13 +42,13 @@
     width: 60%;
 
 }
-#EmailField form{
+#FormEmailField{
     display: flex;
-    justify-content: flex-end;
-    
+    justify-content: space-between;
+    max-width: 600px;
 }
 
-.ColumnFeatures button {
+.ButtonFeatures {
     color: #fff;
     font-weight: bold;
     background-color: #131d47;
@@ -122,10 +123,45 @@
         font-size: 18px;
     }
   }
- 
+  #ButtonEmailSentFeatures{
+    color: #fff;
+    font-weight: bold;
+    background-color: #131d47;
+    border-radius: 5px;
+    font-size: 22px;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    overflow: hidden;
+    transition: all 1s ease;
+    padding: 0;
+    margin-bottom: 16px;
+    transition: all 1s ease;
+    width: 100%;
+    max-width: 600px;
+    
+}
+  .ButtonEmailSentFeatures{
+      height: 0;
+  }
+  .FormClose{
+      overflow: hidden;
+      height: 40px;
+    animation: FormClose 1s forwards;
+    -webkit-animation: FormClose 1s forwards;
+  }
+  .ButtonEmailSentFeaturesShow{
 
-
-
+height: 50px;
+}
+@keyframes FormClose {
+    0% { width: 100%; }
+    100% { width: 0; }
+}
+@-webkit-keyframes FormClose {
+    0% { width: 100%; }
+    100% { width: 0; }
+}
  
 
 

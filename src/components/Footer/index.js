@@ -5,7 +5,7 @@ import './styles.css'
 
 export default function Home({ShowContact, margin, padding}) {
   return (
-    <div className='FooterContainer' style={{margin:margin, padding:padding}}>
+    <div className='FooterContainer' id='FooterContainer' style={{margin:margin}}>
       <ul id='FooterContainerUl' className={`FooterContainer${ShowContact}`}>
         <li>
           <GitHub/>

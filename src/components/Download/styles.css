@@ -1,0 +1,30 @@
+#DownloadConatainer{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 5%;
+    width: 100%;
+    left: 0;
+}
+
+#DownloadConatainer a{
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 6px 50px;
+    font-size: 30px;
+    font-weight: bold;
+    transition: all 1s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+
+}
+
+@media only screen and (max-width: 900px) {
+    #DownloadConatainer a{
+        font-size: 20px;
+    }
+}

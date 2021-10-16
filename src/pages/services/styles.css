@@ -9,6 +9,7 @@
     align-items: flex-end;
     width: 100%;
     height: 100vh; 
+    min-height: 670px;
     background: linear-gradient(150deg, #131d47, #13214c, #122c58, #0c3c6a, #00517f, #006a95, #0084aa, #0f9ebb, #2fb6c9, #47c9d3, #57d5d9, #5ddadb);
 }
 .ColumnServices{

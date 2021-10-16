@@ -1,30 +1,26 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
+import { debounce } from 'lodash';
 import './styles.css'
 import { Logo } from '../../images/Images'
-import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import Services from '../services'
-import Features from '../features'
-import Contact from '../contact'
+import Download from '../../components/Download'
+
+
 const Title = 'Bem-Vindo!'
 const Description = {
   line1: "A See Later é uma extensão web desenvolvida para agilizar sua vida na web.",
   line2: "Com foco em produtividade, em apenas 2 cliques você tem seu link salvo para uma visita futura.",
   line3: "Quando convêniente, basta abrir o See Later e navegar para a página salva."
 }
-
-
-export default function Home() {
-  const [ShowLogo, setShowLogo] = useState('LogoHide')
-  const [ShowContact, setShowContact] = useState('Contact')
-  const [Exec, setExec] = useState(false)
-  const [Exec2, setExec2] = useState(false)
-
-
+export default function Home({
+  ShowLogo, setShowLogo,
+  ShowContact, setShowContact,
+   setExec,
+   setExec2
+}) {
   function handleScroll() {
     const WinHeight = window.innerHeight
     const ScrollTop = document.documentElement.scrollTop
-
     if (ScrollTop > WinHeight / 2) {
       setShowLogo('LogoShow')
       setExec(true)
@@ -42,27 +38,30 @@ export default function Home() {
 
   }
   function handleOpenFieldsContact(){
-    let el = document.getElementById('ButtonFieldsContact');
-    el.className ='ButtonFieldsContactShow';
-    let el2 = document.getElementById('FieldsContact');
-    el2.className ='FieldsContactShow';
+     let el = document.getElementById('ButtonFieldsContact');
+     el.className ='ButtonFieldsContactShow';
+     let el1 = document.getElementById('ButtonConfirmedContact');
+     el1.className ='ButtonConfirmedContact';
+     let el2 = document.getElementById('FieldsContact');
+     setTimeout(() => {
+      el2.className ='FieldsContactShow';
+    }, 1000);
+     console.log(el, el2)
   }
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', debounce(handleScroll,100))
     return () => { window.removeEventListener('scroll', handleScroll) }
   }, [])
 
   return (
-    <div className='Container'>
-      <Header ShowLogo={ShowLogo} ShowContact={ShowContact} Exec={Exec} Exec2={Exec2} />
-      <div id='HomeContainer' className='HomeContainer'>
-        <div className="HomeBannerBox1">
-          <div id='HomeLogo' className={`HomeLogo${ShowLogo}`}>
-            <Logo />
+    <div id='HomeContainer' className='HomeContainer' >
+        <div id="HomeBannerBox1" className="HomeBannerBox1">
+          <div id='HomeLogo' className={`HomeLogo${ShowLogo}`} >
+            <Logo/>
+            <Download/>
           </div>
         </div>
-        <div className="HomeBannerBox2">
-
+        <div className="HomeBannerBox2" >
           <div className='HomeBannerBox2Sub'>
             <div className='HomeBannerBox2SubDescription'>
               <h1>{Title}</h1>
@@ -72,7 +71,7 @@ export default function Home() {
             </div>
             <div className='HomeBannerBox2SubFooter'>
               <Footer ShowContact={ShowContact} margin={`0 0 3% 0`} padding={`0 0 0 8%`} />
-              <a id='ButtonFieldsContactHome' 
+              <a id='ButtonFieldsContactHome' className='ButtonFieldsContactHome'
               href='#ContactContainer'
               onClick={handleOpenFieldsContact}
               >
@@ -82,16 +81,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div id='ServicesContainer' className='Services'>
-        <Services />
-      </div>
-      <div id='FeaturesContainer' className='Features'>
-        <Features />
-      </div>
-      <div id='ContactContainer' className='Contact'>
-        <Contact />
-      </div>
-    </div>
+      
   )
 }
 

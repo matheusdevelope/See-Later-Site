@@ -2,9 +2,14 @@
     display: flex;
     flex: 1;
     height: 100vh;
-    }
-   
+    min-height: 640px;
+    
+}
+#HomeContainer{
+transition: all 1s ease;
+}
 .HomeBannerBox1{
+    position: relative;
     display: flex;
     flex: 1;
     align-items: center;
@@ -32,6 +37,7 @@ padding-bottom: 170px;
 .HomeBannerBox2SubFooter{
     display: flex;
     align-items: center;
+    margin-bottom: 5%;
 }
 .HomeBannerBox2SubDescription h1{
     font-size: 35pt;
@@ -57,6 +63,71 @@ padding-bottom: 170px;
     margin: 0  12px 0 auto;
 }
 
+#HomeLogo{
+    transition: all 1s ease;
+}
+.HomeLogoLogoShow{
+    opacity: 0;
+}
+#HomeLogoSvg{
+    transition: all 0.5s ease;
+}
+@media only screen and (max-width: 700px) {
+    #HomeLogoSvg{
+        height: 70px;
+    }
+    .HomeContainer{
+       padding-top: 50px;
+       display: flex;
+       flex-direction: column;
+    }
+    .HomeBannerBox2SubDescription{
+        padding-bottom: 70px;
+    }   
+    #HomeBannerBox1{
+        max-height: 270px;
+        min-height: 250px;
+    }
+}
+@media only screen and (max-width: 790px) {
+    #ButtonFieldsContactHome{
+        font-size: 18px;
+    }
+    #FooterContainer li{
+        padding :0 0 0 22px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    #ButtonFieldsContactHome{
+        font-size: 20px;
+    }
+    #FooterContainer{
+        padding: 1px;
+    }
+    #FooterContainer li{
+        padding :0 0 0 16px;
+    }
+    #HeaderContainer a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 14px;
+        
+    }
+    #HeaderContainer ul{
+        background-color: #131D47;
+        width: 60%;
+    }
+    #HeaderContainer li{
+        margin: 0 4px;
+    }
+    #ContactHeader {
+        width: 50px;
+
+     }
+    
+   
+   
+}
 
 
 
