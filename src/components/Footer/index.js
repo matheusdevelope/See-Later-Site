@@ -3,18 +3,28 @@ import { Email, GitHub, Linkedin } from '../../images/Images'
 import './styles.css'
 
 
-export default function Home({ShowContact, margin, padding}) {
+export default function Home({ShowContact, margin}) {
   return (
     <div className='FooterContainer' id='FooterContainer' style={{margin:margin}}>
       <ul id='FooterContainerUl' className={`FooterContainer${ShowContact}`}>
         <li>
-          <GitHub/>
+          
+          <a href='https://github.com/matheusdevelope/See-Later' 
+         target="_blank">
+           <GitHub/>
+         </a>
         </li>
         <li>
-          <Linkedin/>
+          <a href='https://www.linkedin.com/in/matheus-dev/' target='_blank'>
+            <Linkedin/>
+          </a>
+          
         </li>
         <li>
-          <Email/>
+          <a href='#ContactContainer'>
+             <Email />
+          </a>
+         
         </li>
       </ul>
     </div>

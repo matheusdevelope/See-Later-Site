@@ -9,7 +9,6 @@ html{
 body{
 margin: 0;
 background-color: transparent;
-min-height: 640px;
 }
 body::-webkit-scrollbar {
     width: 5px;               /* width of the entire scrollbar */

@@ -41,6 +41,7 @@ padding-bottom: 170px;
 }
 .HomeBannerBox2SubDescription h1{
     font-size: 35pt;
+    margin-top: 40px;
 }
 .TextSubDescription{
     margin: 0;
@@ -86,7 +87,7 @@ padding-bottom: 170px;
     }   
     #HomeBannerBox1{
         max-height: 270px;
-        min-height: 250px;
+        min-height: 230px;
     }
 }
 @media only screen and (max-width: 790px) {
@@ -95,6 +96,24 @@ padding-bottom: 170px;
     }
     #FooterContainer li{
         padding :0 0 0 22px;
+    }
+}
+@media only screen and (max-height: 400px) {
+    .HomeBannerBox2SubDescription h1{
+        font-size: 30pt;
+    }
+    .TextSubDescription{
+        margin: 0;
+        font-size: 18px;
+    }
+    #ButtonFieldsContactHome{
+        font-size: 16px;
+    }
+    #FooterContainer{
+        padding: 1px;
+    }
+    #FooterContainer li{
+        padding :0 0 0 16px;
     }
 }
 @media only screen and (max-width: 700px) {
@@ -124,7 +143,13 @@ padding-bottom: 170px;
         width: 50px;
 
      }
-    
+     .HomeBannerBox2SubDescription h1{
+        font-size: 25pt;
+    }
+    .TextSubDescription{
+        margin: 0;
+        font-size: 16px;
+    }
    
    
 }

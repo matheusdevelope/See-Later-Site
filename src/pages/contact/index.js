@@ -59,7 +59,7 @@ export default function Contact() {
         try {
             const response = await fetch('http://54.233.252.63:3300/sendmail', email)
              const body = await response.json()
-             console.log(body)
+            // console.log(body)
             if (response.status === 200) {
                   handleConfirmationMail(true)
             }
@@ -149,6 +149,7 @@ export default function Contact() {
 
                     </div>
                 </form>
+                <p>matheusdevctt@gmail.com</p>
                 <Footer margin={`16px 0 0 0`} padding={`0`} />
             </div>
         </div>
