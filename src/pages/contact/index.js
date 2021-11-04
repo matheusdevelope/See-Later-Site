@@ -52,14 +52,14 @@ export default function Contact() {
         setShowLoading('LoadingStart')
 
         const email = {
-            method: 'GET',
-           // body: JSON.stringify(formEmail),
+            method: 'POST',
+            body: JSON.stringify(formEmail),
             headers: { "Content-type": "application/json; charset=UTF-8" }
         }
         try {
-            const response = await fetch('http://54.233.252.63:3200/Marcas', email)
-             const body = await response.json()
-             console.log(body)
+            const response = await fetch('http://54.233.252.63:3300/sendmail', email)
+             //const body = await response.json()
+             //console.log(body)
             if (response.status === 200) {
                   handleConfirmationMail(true)
             }
@@ -155,3 +155,7 @@ export default function Contact() {
         </div>
     )
 }
+
+
+
+

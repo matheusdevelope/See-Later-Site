@@ -56,7 +56,7 @@ export default function () {
         }
         try {
             const response = await fetch('http://54.233.252.63:3300/createemail', email)
-            //  const body = await response.json()
+             // const body = await response.json()
             //  console.log(body)
             if (response.status === 200) {
                 handleChangeText(true)
