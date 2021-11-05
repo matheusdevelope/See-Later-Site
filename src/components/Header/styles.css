@@ -17,9 +17,12 @@ background-color: #131D47;
     height: 50px;
     justify-content: space-between;
     padding: 0;
-    margin: auto 0; 
-    align-items: center;   
+    margin: auto 0;
+    align-items: center;
     background-color: #5DDADB;
+}
+#UlHeader{
+    transition: all 1s ease;
 }
 .HeaderContainer li{
     display: flex;
@@ -28,7 +31,7 @@ background-color: #131D47;
     font-family: 'MontserratRegular', sans-serif;
     font-weight: bold;
     cursor: pointer;
-    width: 100px;
+    /* background-color: aliceblue; */
     align-items: center;
     justify-content: center;
 }
@@ -46,7 +49,6 @@ background-color: #131D47;
     transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
 }
-
 .LogoShow {
     cursor: pointer;
     -webkit-animation: slide-in 0.5s forwards;
@@ -70,18 +72,18 @@ background-color: #131D47;
     0% { -webkit-transform: translateX(0%); }
     100% { -webkit-transform: translateX(-100%); }
 }
- 
- .ContactShow {
+.ContactShow {
     animation: slide-inc 1s forwards;
     -webkit-animation: slide-inc 1s forwards;
-    margin-right: 16px;
-    display: flex;
-    justify-content: center;
- }
+     margin-right: 12px;
+/*      
+     display: flex;
+    justify-content: center;  */
+}
 
 #ContactHeader {
     overflow: hidden;
-    width: 0;
+    width: 0;    
 }
 .ContactHidden {
     padding: 0;
@@ -98,17 +100,125 @@ background-color: #131D47;
 }
 @keyframes slide-inc {
     0% { width: 0; }
-    100% { width: 130px; }
+    100% { width: 100px; }
 }
 @-webkit-keyframes slide-inc {
     0% { width: 0; }
-    100% { width: 130px; }
+    100% { width: 100px; }
 }
 
 @media only screen and (max-width: 1000px) {
     .HeaderContainer li{
         font-size: 16px;
     }
+    .ContactShow {
+        animation: slide-inc 1s forwards;
+        -webkit-animation: slide-inc 1s forwards;
+         margin-right: 12px;
+    /*      
+         display: flex;
+        justify-content: center;  */
+    }
+    @keyframes slide-inc {
+        0% { width: 0; }
+        100% { width: 90px; }
+    }
+    @-webkit-keyframes slide-inc {
+        0% { width: 0; }
+        100% { width: 90px; }
+    }
+
  }
+ @media only screen and (max-width: 490px) {
+   .HeaderContainer ul{
+    flex-direction: column;
+    overflow: hidden;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    min-width: 150px;
+    max-width: 150px;
+    position: absolute;
+    top: 45px;
+    right: 1px;
+}
+#HeaderContainer a{
+    font-size: 18px;
+}
+
+.ClosedMenu{
+    animation: slide-outMenu 0.4s forwards;
+    -webkit-animation: slide-outMenu 0.4s forwards;
+}
+.OpenUlMenu{
+    animation: slide-incMenu 0.4s forwards;
+    -webkit-animation: slide-incMenu 0.4s forwards;
+}
+
+#MenuHamburguer{
+    transform:rotate(270deg);
+    display: block;
+    margin: 0 38px 0 0;  
+}
+.ArrowDown{
+    animation: slide-outArrow 0.4s forwards;
+    -webkit-animation: slide-outArrow 0.4s forwards;
+     /* transform:rotate(270deg); */
+}
+.ArrowUp{
+    animation: slide-incArrow 0.4s forwards;
+    -webkit-animation: slide-incArrow 0.4s forwards;
+     /* transform:rotate(270deg); */
+}
 
 
+
+
+}
+
+
+.MenuHamburguer{
+    display: none;
+}
+.ArrowDown{
+    display: none;
+}
+.ArrowUp{
+    display: none;
+}
+
+
+@keyframes slide-incMenu {
+    0% {height: 0; }
+    100% {height: 150px; }
+}
+@-webkit-keyframes slide-incMenu {
+    0% {height: 0; }
+    100% {height: 150px; }
+}
+@keyframes slide-outMenu {
+    0% {height: 150px; }
+    100% {height: 0; }
+}
+@-webkit-keyframes slide-outMenu {
+    0% {height: 150px; }
+    100% {height: 0; }
+}
+
+
+
+@keyframes slide-outArrow {
+    0% { transform:rotate(90deg); }
+    100% { transform:rotate(270deg); }
+}
+@-webkit-keyframes slide-outArrow {
+    0% {transform:rotate(90deg); }
+    100% { transform:rotate(270deg); }
+}
+@keyframes slide-incArrow {
+    0% { transform:rotate(270deg); }
+    100% { transform:rotate(90deg); }
+}
+@-webkit-keyframes slide-incArrow {
+    0% { transform:rotate(270deg); }
+    100% { transform:rotate(90deg); }
+}

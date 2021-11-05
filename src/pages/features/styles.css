@@ -64,7 +64,7 @@
     transition: all 1s ease;
     color: #000;
     font-weight: bold;
-    margin-right: 8px;
+    /* margin-right: 8px; */
     border-radius: 10px;
     font-size: 22px;
     border: 0;
@@ -162,6 +162,17 @@ height: 50px;
     0% { width: 100%; }
     100% { width: 0; }
 }
- 
-
-
+@media only screen and (max-width: 490px) {
+    .InputEmailFieldFeaturesShow{
+        font-size: 16px;  
+        margin: 0 0 8px 0;
+        min-width: 280px;
+        max-width: 280px;
+        padding: 8px;
+    }
+    #FormEmailField{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+}

@@ -77,6 +77,7 @@ export default function Contact() {
 
     }
     function CheckFields(e) {
+        window.location.href = '#ContactContainer' 
         e.preventDefault()
         let Exec = false
         let Fields = 'Por favor preencher '
@@ -128,19 +129,19 @@ export default function Contact() {
 
                         <input id='InputFieldContact' type='text' value={formEmail.Name}
                             onChange={e => handleChange(e.target.value, 'Name')}
-                            placeholder='Qual o seu nome?' />
+                            placeholder='Qual o seu nome?' spellcheck="false"/>
 
                         <input id='InputFieldContact' type='email' value={formEmail.Email}
-                            onChange={e => handleChange(e.target.value, 'Email')}
+                            onChange={e => handleChange(e.target.value, 'Email')} spellcheck="false"
                             placeholder='Qual o seu e-mail?' />
 
-                        <textarea rows="5" cols="60" maxlength="100" spellcheck="false" autoCapitalize='words'
+                        <textarea rows="5" cols="60" maxlength="100" spellcheck="false"
                             id='InputMessageContact' type='text' placeholder='Insira sua mensagem'
                             onChange={e => handleChange(e.target.value, 'Message')}
                             value={formEmail.Message} />
 
-                        <button id="ButtonSend" onClick={(e) => CheckFields(e)}>
-                            Enviar
+                        <button id="ButtonSend" onClick={(e) => CheckFields(e)} >
+                              Enviar  
                             {ShowLoading == 'LoadingStart'
                                 &&
                                 <div id='Loading' ></div>

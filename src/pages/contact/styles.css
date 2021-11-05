@@ -190,3 +190,23 @@ height: 50px;
       transform: translateY(-15px);
     }
   }
+
+
+@media only screen and (max-width: 400px) {
+    #FieldsContact{
+        min-width: 280px;
+        max-width: 280px;
+    }
+    #InputFieldContact{
+      min-width: 280px;
+      max-width: 280px;
+    }
+    #InputMessageContact{
+      min-width: 280px;
+      max-width: 280px;
+    }
+    #ButtonSend{
+      min-width: 280px;
+      max-width: 280px;
+    }
+}

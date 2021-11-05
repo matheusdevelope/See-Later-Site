@@ -92,7 +92,7 @@ export default function () {
                         <div id='EmailField'>
                             <button id='ButtonEmailSentFeatures' className='ButtonEmailSentFeatures'></button>
                             <form className='FormEmailField' id='FormEmailField' onSubmit={e => { handleOpenEmailField(e) }} >
-                                <input id='InputEmailFieldFeatures' className={ShowFieldEmail}
+                                <input id='InputEmailFieldFeatures' className={ShowFieldEmail} spellcheck="false"
                                     value={formEmail.Email} onChange={e => handleChange(e.target.value, 'Email')} type='email' placeholder='Insira seu e-mail' />
                                 <button className='ButtonFeatures' type="submit" >{formEmail.Email.includes('@') ? 'Enviar' : 'Me Avise!'}</button>
                             </form>
